@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="app/style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <main>
+        <div id="veryTop">
+            <div id="gray" class="light">
+                <div id="blue">
+                    <div id="lightBlue"></div>
+                </div>
+            </div>
+            <header id="pokedex">
+                <h1>Pokedex</h1>
+            </header>
+        </div>
+        <section id="top">
+            <div id="searchBar">
+                <label for="request"></label>
+                <input type="text" name="request" placeholder="Enter Pokemon name or #">
+                <button>Submit</button>
+            </div>
+            <div id="screenOne" class="screen">
+                <div class="loading" id="loadingOne"></div>
+                <div id="screenOneWrap">
+                    <h2 id="name"></h2>
+                    <h3 id="order"></h3>
+                    <div id="sprite">
+                        <img src="" alt="" >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="fold">
+            <div class="hinge" id="hingeOne"></div>
+            <div class="hinge" id="hingeTwo"></div>
+        </div>
+        <section id="bottom">
+            <div id="screenTwo" class="screen">
+                <div class="loading" id="loadingTwo"></div>
+                <div id="screenTwoWrap">
+                    <div id="types">
+                        <header>Types</header>
+                        <div id="normal" class="type"></div>
+                        <div id="fire" class="type"></div>
+                        <div id="water" class="type"></div>
+                        <div id="grass" class="type"></div>
+                        <div id="electric" class="type"></div>
+                        <div id="ice" class="type"></div>
+                        <div id="fighting" class="type"></div>
+                        <div id="poison" class="type"></div>
+                        <div id="ground" class="type"></div>
+                        <div id="flying" class="type"></div>
+                        <div id="psychic" class="type"></div>
+                        <div id="bug" class="type"></div>
+                        <div id="rock" class="type"></div>
+                        <div id="ghost" class="type"></div>
+                        <div id="dark" class="type"></div>
+                        <div id="dragon" class="type"></div>
+                        <div id="steel" class="type"></div>
+                        <div id="fairy" class="type"></div>
+                    </div>
+                    <div class="stats">
+                        <header>Weight</header>
+                        <div id="weight"></div>
+                    </div>
+                    <div class="stats">
+                        <header>Height</header>
+                        <div id="height"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="veryBottom"></div>
+    </main>
+    <script src="app/logic.js"></script>
+</body>
+</html>

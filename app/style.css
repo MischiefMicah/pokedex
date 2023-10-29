@@ -1,0 +1,309 @@
+/* 
+~#~#~#~#~#~#~#~Table of contents~#~#~#~#~#~#~#~
+1) Global styles
+2) Pokedex Logo & Light
+3) Top Half of Pokedex
+4) Divider Between Screens
+5) Bottom Half of Pokedex
+6) Media Queries
+*/
+
+* {
+    /* font-family: 'Press Start 2P', cursive; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #9e9e9e;
+    margin: 0.2em;
+}
+main {
+    background-color: #d32142;
+    margin: 0;
+    border-radius: 0.7em;
+}
+#veryTop {
+    border-radius: 0.7em;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    background-color: #ff2e2e;
+    display: flex;
+    -webkit-box-shadow: 0px 10px 13px -7px #1a1a1a42, 0px 38px 20px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #1a1a1a42, 0px 38px 20px 5px rgba(0,0,0,0);
+}
+#pokedex {
+    margin: 1em auto 0.5em 2em;
+    color: #FFDE00;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    height: 3em;
+    align-self: center;
+}
+.light {
+    margin: 0.5em 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: #c8c8c8;
+    align-self: center;
+}
+#blue {
+    margin: 3px auto;
+    border-radius: 50%;
+    width: 87%;
+    height: 87%;
+    background-color: #36cbed;
+}
+#lightBlue{
+    position: relative;
+    top: 5px;
+    right: -10px;
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+    background-color: #7edef4;
+}
+#top {
+    display: flex;
+    flex-direction: column;
+}
+#searchBar {
+    display: flex;
+    margin: 2em auto 1.5em auto;
+    width: 86%;
+}
+#searchBar > input {
+    width: 70%;
+    height: 2.5em;
+    border-radius: 0.2em;
+    padding: 0.3em 0.5em;
+    margin: 0 0.2em 0 0 ;
+    background-color: #4d4d4d;
+    color: #f8f8f8;
+    border: none;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+#searchBar > button {
+    width: 30%;
+    margin: 0 auto 0 0.2em;
+    background-color: #72dc6a;
+    border: none;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0px 0px 15px -3px #1a1a1a85; 
+    box-shadow: 0px 0px 15px -3px #1a1a1a85;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#searchBar > button:hover {
+    cursor: pointer;
+    background-color: #50bb48;
+}
+
+#loadingOne {
+    align-self: center;
+}
+
+.loading {
+    background-image: url('../images/loading.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    width: 10em;
+    height: 10em;
+    position: absolute;
+}
+
+@-webkit-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.screen {
+    height: 17.2em;
+}
+
+#screenOne {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 2em auto;
+    width: 80%;
+    background-color: #4d4d4d;
+    border: solid 0.8em #c8c8c8;
+    border-radius: 0.2em;
+}
+
+#screenOneWrap {
+    display: none;
+}
+
+#name {
+    color: #f8f8f8;
+    text-align: center;
+    width: 95%;
+    font-size: 22px;
+    margin: 0.8em auto 0 auto;
+    overflow-x: hidden;
+}
+#order {
+    color: #f8f8f8;
+    font-size: 12px;
+    text-align: center;
+    margin: 0.1em auto 0 auto;
+}
+#sprite {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0.5em auto;
+    background-color: none;
+}
+#sprite > img {
+    margin: 3% auto 0 auto;
+    width: 10em;
+    display: block;
+}
+#fold {
+    display: flex;
+    background-color: #ff2e2e;
+    height: 2em;
+    width: 100%;
+    -webkit-box-shadow: 0px 10px 13px -7px #1a1a1a42,  0px 10px 13px 7px #1a1a1a42, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px -10px 13px -7px #1a1a1a42, 0px 10px 13px 1px #1a1a1a42, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.hinge {
+    height: 100%;
+    width: 0.5em;
+    background-color: #4d4d4d;
+}
+
+#hingeOne {
+    margin: 0 40% 0 auto;
+}
+
+#hingeTwo {
+    margin: 0 auto 0 40%;
+}
+
+#bottom {
+    display: flex;
+}
+
+#screenTwo {
+    color: #f8f8f8;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto 2em auto;
+    width: 80%;
+    background-color: #4d4d4d;
+    border: solid 0.8em #c8c8c8;
+    border-radius: 0.2em;
+}
+
+#screenTwoWrap {
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+}
+
+#types {
+    margin: 0.5em auto; 
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#types > header {
+    width: 100%;
+    text-align: center;
+    margin: 0.5em auto 0.4em auto;
+}
+
+.type {
+    font-family: 'Play', sans-serif;
+    padding: 0.2em;
+    margin: 0.1em;
+    border-radius: 0.3em;
+    background-color: #ff2e2e;
+    display: none;
+}
+
+.divider {
+    width: 90%;
+    height: 0.2em;
+    background-color: #f8f8f8;
+    margin: 1em auto;
+}
+
+#weight,
+#height {
+    font-family: 'Play', sans-serif;
+    font-size: 24px;
+}
+
+.stats {
+    margin: 1em auto;
+    text-align: center;
+}
+
+#veryBottom {
+    background-color: #ff2e2e;
+    height: 1.5em;
+    width: 100%;
+    border-radius: 0.7em;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    -webkit-box-shadow: 0px 10px 13px -7px #1a1a1a42, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px -10px 13px -7px #1a1a1a42, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        margin: 1% auto;
+    }
+    .screen {
+        height: 20em;
+    }
+    #sprite > img {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #sprite {
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #sprite > img {
+        min-width: 15em;
+        max-width: 37%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        width: 1000px;
+    }
+}
